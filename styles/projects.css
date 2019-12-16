@@ -1,0 +1,369 @@
+html{
+    margin: 0;
+    padding: 0;
+    height: auto;
+}
+body{
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+/* This begins nav header for screens wider than tablets*/
+
+#nav-header{
+    display: flex;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
+    height: 4em;
+    background-color: #b60002;
+    border: 1px solid black;
+}
+
+#nav-header h1{
+    margin: auto 0;
+}
+
+#nav-header > h1 > a{
+    font-size: .9em;
+    margin: 0 0 0 1em;
+    color: white;
+}
+
+#close-burger-menu{
+    display: none;
+}
+
+
+#nav-links{
+    display: flex;
+    justify-content: space-between;
+    margin: auto 1em auto 0;
+    background-color: #b60002;
+}
+
+#nav-links a{
+    margin: auto 1.5em;
+    padding: 0;
+    font-size: 1em;
+    color: white !important;
+}
+
+#nav-links a:hover{
+    border-bottom: .1em solid black;
+}
+
+#current-page{
+    font-weight: bolder;
+    font-size: 1.2em !important;
+}
+
+#menu-burger{
+    display: none;
+}
+
+footer{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 4.12em;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+.contact-icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style: none;
+    margin: 1em auto 1em auto;
+    padding: 0;
+    font-size: 1em;
+}
+
+.contact-icons a *{
+    font-size: 2em;
+}
+
+/*Template ends here. Footer is included as part of the template*/
+
+/* Page unique style begins here*/
+main{
+    margin: 0;
+    padding: 0;
+}
+
+#projects-sections{
+    width: 94%;
+    position: absolute;
+    top: 25%;
+    left: 03%;
+}
+
+
+#projects-sections p, #projects-sections h3{
+    text-align: center;
+    color: #b60002;
+}
+
+#projects-sections > p{
+    font-size: 1.22em;
+    width: 70%;
+    margin: 4.5em auto;
+    cursor: pointer;
+    color: black !important;
+}
+
+.hide-p{
+    display: none !important;
+}
+
+#go-back-projects{
+    display: none;
+    position: absolute;
+    top: -.05em;
+    left: 4em;
+    cursor: pointer;
+}
+
+#go-back-pojects{
+    color: black !important;
+}
+
+.show-project-arrow{
+    display: block !important;
+}
+
+#go-back-projects *{
+    font-size: 2.5em;
+}
+
+#frontend-projects{
+    display: none;
+    grid-template: 1fr  1fr  / 1fr 1fr;
+    grid-gap: 1em;
+    margin-top: 5em;
+    margin-bottom: 5em;
+}
+
+#backend-projects{
+    display: none;
+    grid-template: 1fr 1fr/ 1fr 1fr;
+    grid-gap: 1em;
+    margin-top: 5em;
+    margin-bottom: 5em;
+}
+
+.display-project-section{
+    display: grid !important;
+}
+
+.display-full-project{
+    position: absolute !important;
+    top: 5% !important;
+    left: .03%;
+    text-shadow: none !important;
+    width: auto;
+    animation-name: displayproject;
+    animation-duration: 1.5s;
+    background-color: 	#fffff2;
+}
+
+@media screen and (min-width: 1900px){
+    .display-full-project{
+        left: 3.02% !important;
+    }
+}
+
+.project{
+    margin: 1em 0;
+    padding: 0;
+    border: .06em solid black;
+    box-shadow: .3em .2em .1em gray;
+    background-color: white;
+    transform: translateX(0);
+}
+
+.project img{
+    width: 100%;
+    min-height: 100% !important;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.project-info{
+    display: none;
+    height: auto;
+    margin: 0;
+    background-color: #b60002;
+}
+
+.project-info *{
+    color: white !important;
+}
+
+.project-info > h3{
+    margin: 0;    
+}
+
+
+.project-info > div{
+    display: flex;
+    margin-bottom: 5em;
+    justify-content: space-evenly;
+}
+
+.hide{
+    width: 0 !important;
+    border: none !important;
+    display: none !important;
+}
+
+.show-project-info{
+    display: block !important;
+    height: 10em;
+}
+
+.contact-icons a:nth-child(1){
+    color: black !important;
+}
+
+.contact-icons a:nth-child(2){
+    color: #2867B2 !important;
+}
+.contact-icons a:nth-child(3){
+    color: rgb(26, 175, 138) !important;
+}
+
+@keyframes displayproject {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+/*This begins mobile view */
+@media screen and (max-width: 770px){
+    body{
+        font-size: 16px;
+    }
+
+    /*This begins the mobile nav header for tablets and mobile phones*/
+    #menu-burger{
+        display: block;
+        position: relative;
+        top: 1em;
+        right: 1em;
+        z-index: 3;
+    }
+
+    .hide-menu-burger{
+        display: none !important;
+    }
+
+    #close-burger-menu{
+        display: none;
+        position: relative;
+        top: .5em;
+        right: .5em;
+        z-index: 3;
+        font-size: 2em;
+        padding: 0;
+    }
+
+    .show-close-menu{
+        display: block !important;
+    }
+
+    #menu-burger div{
+        background-color: white;
+        margin: .2em 0;
+        width: 1.5em;
+        height: .2em;
+    }
+
+    header{
+        justify-content: space-between;
+        height: 3.5em;
+    }
+
+    header > h1{
+        margin: auto 0;
+    }
+
+    header > h1 > a{
+        margin-left: 1em;
+    }
+
+    #nav-links{
+        display: none;
+        position: absolute;
+        z-index: 2;
+        top: .04em;
+        left: -.05em;
+        height: 100vh;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        flex-direction: column;
+    }
+
+    .display-links{
+        display: flex !important;
+        animation-name: navlinks !important;
+        animation-duration: 1.2s !important;
+    }
+
+    @keyframes navlinks{
+        from{
+            transform: translateX(100%);
+        }
+        to{
+            transform: translateX(0);
+        }
+    }
+
+    .display-links{
+        display: flex !important;
+    }
+
+    #nav-links a{
+        margin: auto;
+        font-size: 1.12em;
+        color: black;
+    }
+
+    #go-back-projects{
+        top: 1em;
+    }
+
+    #frontend-projects{
+        grid-template: 1fr 1fr 1fr 1fr/ 1fr;
+        grid-gap: 2em;
+    }
+
+    #backend-projects{
+        grid-template: 1fr 1fr/ 1fr;
+    }
+}

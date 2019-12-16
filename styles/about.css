@@ -1,0 +1,246 @@
+html{
+    margin: 0;
+    padding: 0;
+    height: auto;
+}
+body{
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+/* This begins nav header for screens wider than tablets*/
+
+#nav-header{
+    display: flex;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
+    height: 4.12em;
+    background-color: #b60002;
+}
+
+#nav-header h1{
+    margin: auto 0;
+}
+
+#nav-header > h1 > a{
+    font-size: .9em;
+    margin: 0 0 0 1em;
+    color: white;
+}
+
+#close-burger-menu{
+    display: none;
+}
+
+
+#nav-links{
+    display: flex;
+    justify-content: space-between;
+    margin: auto 1em auto 0;
+    background-color: #b60002;
+}
+
+#nav-links a{
+    margin: auto 1.5em;
+    padding: 0;
+    font-size: 1em;
+    color: white !important;
+}
+
+#nav-links a:hover{
+    border-bottom: .1em solid black;
+}
+
+#current-page{
+    font-weight: bolder;
+    font-size: 1.2em !important;
+}
+
+#menu-burger{
+    display: none;
+}
+
+footer{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 4.12em;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+.contact-icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style: none;
+    margin: 1em auto 1em auto;
+    padding: 0;
+    font-size: 1em;
+}
+
+.contact-icons a *{
+    font-size: 2em;
+}
+
+/*Template ends here. Footer is included as part of the template*/
+
+/* Page unique style begins here*/
+main{
+    margin: 0;
+    padding: 0;
+}
+
+#about-section{
+    width: 94%;    
+    height: 12em;
+    padding: 3em 0 2.5em 0;
+    border-radius: 1em;
+    position: absolute;
+    top: 23%;
+    left: 03%;
+    margin-bottom: 5.5em;
+}
+
+#about-section *{
+    text-align: center;
+}
+
+#about-section p{
+    display: block;
+    width: 70%;
+    margin: 0 auto;
+}
+
+#about-section p:nth-child(2){
+    margin-top: 2em !important;
+}
+
+.contact-icons a:nth-child(1){
+    color: black !important;
+}
+
+.contact-icons a:nth-child(2){
+    color: #2867B2 !important;
+}
+.contact-icons a:nth-child(3){
+    color: rgb(26, 175, 138) !important;
+}
+
+/*This begins mobile view */
+@media screen and (max-width: 770px){
+    body{
+        font-size: 16px;
+    }
+
+    /*This begins the mobile nav header for tablets and mobile phones*/
+    #menu-burger{
+        display: block;
+        position: relative;
+        top: 1em;
+        right: 1em;
+        z-index: 3;
+    }
+
+    .hide-menu-burger{
+        display: none !important;
+    }
+
+    #close-burger-menu{
+        display: none;
+        position: relative;
+        top: .5em;
+        right: .5em;
+        z-index: 3;
+        font-size: 2em;
+        padding: 0;
+    }
+
+    .show-close-menu{
+        display: block !important;
+    }
+
+    #menu-burger div{
+        background-color: white;
+        margin: .2em 0;
+        width: 1.5em;
+        height: .2em;
+    }
+    
+    header{
+        justify-content: space-between;
+        height: 3.5em;
+    }
+
+    header > h1{
+        margin: auto 0;
+    }
+
+    header > h1 > a{
+        margin-left: 1em;
+    }
+
+    #nav-links{
+        display: none;
+        position: absolute;
+        z-index: 2;
+        top: .04em;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        flex-direction: column;
+    }
+
+    .display-links{
+        display: flex !important;
+        animation-name: navlinks !important;
+        animation-duration: 1.2s !important;
+    }
+
+    @keyframes navlinks{
+        from{
+            transform: translateX(100%);
+        }
+        to{
+            transform: translateX(0);
+        }
+    }
+
+    .display-links{
+        display: flex !important;
+    }
+
+    #nav-links a{
+        margin: auto;
+        font-size: 1.12em;
+        color: black;
+    }
+
+
+    #about-section{
+        top: 23%;
+        height: 24em;
+        padding: 3em 0 4.5em 0;
+    }
+
+}
